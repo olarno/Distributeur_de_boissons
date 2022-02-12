@@ -14,15 +14,17 @@ prix = float(prix)
 # monnaie < prix = manque de l'argent (X)
 # monnaie == prix = pile poil merci 
 # monnaie > prix = merci rendre monaie (X)
+# CUSTOM : Ajout du montant rendu ou montant manquant
 if monnaie < prix :
   monnaie_supplement = prix - monnaie
   print("Vous devez ajouter de la monnaie.")
-  print(f"Vous devez ajouter au minimum {monnaie_supplement}€")
+  print(f"Il manque : {monnaie_supplement}€")
 elif monnaie == prix :
   print("Merci!")
+  print("A bientôt!")
 elif monnaie > prix :
   monnaie_rendu = monnaie - prix 
   print("Merci!")
-  print(f"Nous vous rendons {monnaie_rendu}€ pensez bien à les récuperer!")
+  print(f"Nous vous rendons {monnaie_rendu}€! Pensez bien à les récuperer!")
 else :
   print("Erreur machine")
